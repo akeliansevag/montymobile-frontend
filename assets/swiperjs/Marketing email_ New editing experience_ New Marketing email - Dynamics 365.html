@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<link rel="modulepreload" href="https://content.powerapps.com/resource/uci-infra/scripts/app.74051a71263dffd6bccc18a135bb5948.js" >
+	<link rel="preconnect" href="https://apps.powerapps.com">
+
+	<script type="text/javascript" nomodule src="https://content.powerapps.com/resource/uci-infra/scripts/es6-shim.min.6a3051ef3d8ddcd84c7a6dfd99a75d47.js" crossorigin></script>
+	<script type="text/javascript" nomodule src="https://content.powerapps.com/resource/uci-infra/scripts/es7-shim.min.4997d84316d6302b9bcccaba4e949853.js" crossorigin></script>
+	<script type="text/javascript" nomodule src="https://content.powerapps.com/resource/uci-infra/scripts/fetch.umd.d7bb06d7d3c0b7621c719298d85e319a.js" crossorigin></script>
+	<script type="text/javascript">
+		var __public_path__ = "https://content.powerapps.com/resource/uci-infra/";
+		
+		// Load pointer polyfill if necessary
+		if (!window.PointerEvent)
+		{
+			var pep = document.createElement("script"); pep.async = false;
+			pep.src = "https://content.powerapps.com/resource/uci-infra/scripts/pep.4851d435ad48a3082a2c3f628fe0f861.js";
+			pep.crossOrigin = "anonymous";
+			document.head.appendChild(pep);
+		}
+	</script>
+	<script defer src="/uclient/scripts/cdnEndpointCheck.js?v=1.4.6248-2308.2" ></script>
+
+	<style data-fela-type="RULE" type="text/css"></style>
+	<title>Microsoft Dynamics 365</title>
+	<meta name="viewport" id="viewport-meta" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+
+
+
+
+
+
+	<script type="text/javascript">
+		/* Preload parameters injected at runtime */
+		var __preload = {"org":"unq9e5d762bf8ca4f5bac6a1178bff67","orgId":"9e5d762b-f8ca-4f5b-ac6a-1178bff67e2b","serverRequestId":"6d144af7-c1a2-4659-bb7b-82b94b419505","serverVersion":"9.2.23082.184","userId":"b406365f-c151-ec11-8c62-6045bd8a884c","aadObjectId":"1e9e400b-1c04-4367-8a7c-2f8f9ec0841c","aadTenantId":"b19a8f42-dd22-4b36-9049-5167ae33bb54","aadLoginHint":"sevag.akelian@montyholding.com","isExternalUser":false,"isLiveId":true,"isReliableOfflineTelemetryEnabled":true,"isDelayTelemetryEnabled":false,"isSkipStackTraceOnWarnTelemetryEnabled":true,"isWorkerThreadTelemetryOptimizationEnabled":false,"isPreserveWebViewStateEnabled":true,"isRTL":false,"localizedStrings":{"labels":{"errorWaitingMessage":"We are experiencing some errors while trying to load the application...","errorFailedMessage":"Application failed to load","errorDetailsLabel":"Show details","errorCode":"Error Code","sessionId":"Session Id","activityId":"Activity Id","requestId":"Request Id","timestamp":"Timestamp","Button_Label_OK":"OK","loading":"Loading..."},"errors":{"UnknownError":{"errorTitle":"Error","errorMessage":"Something has gone wrong. Check technical details for more details."},"Status404":{"errorTitle":"Not Found","errorMessage":"The requested resource does not exist on the server."},"Status500":{"errorTitle":"Internal Server Error","errorMessage":"An error has occurred on the server."}}}};
+		/* Preload calls */
+		/* Earlier retrieve form data */
+		!function(){function e(e,t){var a=e.indexOf(t+"=");if(a>-1){var n=t.length+1,i=e.indexOf("&",a);return e.substring(a+n,i>-1?i:e.length)}return null}function t(){return window.location.hostname}var a;function n(e,t){return new Promise((function(a,n){var i=new XMLHttpRequest;i.open("GET",e),window.__preload&&(window.__preload.aadObjectId&&i.setRequestHeader("x-ms-sw-objectid",window.__preload.aadObjectId),window.__preload.aadTenantId&&i.setRequestHeader("x-ms-sw-tenantid",window.__preload.aadTenantId),i.setRequestHeader("x-ms-correlation-id",window.__preload.initialActivityId)),t&&t.forEach((function(e,t){i.setRequestHeader(t,e)})),i.onreadystatechange=function(){if(4===i.readyState){var t=function(){return Promise.resolve(JSON.parse(i.responseText))},n=200===i.status;a({ok:n,status:i.status,statusText:i.statusText,json:t,text:t,url:e})}},i.send()}))}
+/**
+ * @license Copyright (c) Microsoft Corporation. All rights reserved.
+ */
+window.ApplicationCodeExecuteStart=performance&&performance.now&&performance.now(),window.__preload.initialActivityId=function(){for(var e="",t=0;t<36;t++)if(14===t)e+="4";else if(8===t||13===t||18===t||23===t)e+="-";else if(19===t){var a=Math.floor(16*Math.random());e+="0123456789abcdef".substr(3&a|8,1)}else e+="0123456789abcdef".substr(Math.floor(16*Math.random()),1);return e}(),function(e){e[e.Browser=1]="Browser",e[e.MobileApplication=2]="MobileApplication",e[e.MailApp=3]="MailApp"}(a||(a={})),window.clientApiGlobalStoreManager=void 0;var i=window.location.href,r=e(i,"appid"),o=function(e){var t=parseInt(e,10);if(!isNaN(t))switch(t){case a.Browser:return"Browser";case a.MobileApplication:return"MobileApplication";case a.MailApp:return"MailApp"}return""}(e(i,"clienthost")),s=t().substr(t().indexOf(".")),c=new Date;c.setTime(c.getTime()-864e5),document.cookie="CrmNativeAuth=;domain="+s+";expires="+c+";path=/";var d=[{etn:"account",entitySetName:"accounts"},{etn:"contact",entitySetName:"contacts"},{etn:"incident",entitySetName:"incidents"},{etn:"lead",entitySetName:"leads"},{etn:"opportunity",entitySetName:"opportunities"}];var l=window;function u(e,t,a,n){void 0===n&&(n=!0);var i=t;fetch(e,function(e){return void 0===e&&(e=!0),{headers:{"Content-Type":"application/json",Prefer:'odata.include-annotations="*"',"x-ms-sw-skipcache":"1","MSCRM.ReturnNotifications":e?"true":"false"}}}(n)).then((function(e){200===e.status&&(l.__Prefetched_formData[i][a]=e)}))}if(r&&"null"!==r){var p=e(i,"org")||window.__preload&&window.__preload.org,f=(!!e(i,"liveid")||!(!window.__preload||!window.__preload.isLiveId)?function(e){var t=e.split("/");return t.length>=2?t[0]+"//"+t[2]:null}(i):"/"+p)+"/api/data/v9.0/",w=n(f+"GetClientMetadata(ClientMetadataQuery=@ClientMetadataQuery)?@ClientMetadataQuery={%22MetadataType%22:null,%22MetadataSubtype%22:null,%22EntityLogicalName%22:null,%22MetadataId%22:null,%22MetadataNames%22:[],%22GetDefault%22:false,%22DependencyDepth%22:%22UserContext%22,%22ChangedAfter%22:null,%22Exclude%22:[],%22AppId%22:%22".concat(r,"%22}"),new Map([["ClientHost",o],["x-ms-metadatareductionlevel","2"]])),v=n(f+"EntityDefinitions?$select=IsActivity,IsVisibleInMobileClient,ObjectTypeCode,LogicalName,DisplayName,DisplayCollectionName,ActivityTypeMask&$filter=IsActivity%20eq%20true");window.__uciServerPreload={userContext:w,activityFlags:v},function(e){var t=!1;try{t="true"===localStorage.getItem("RetrieveFormDataEarlyEnabled")}catch(e){}if(l.fetch&&l.URL&&t){var a=new URL(i);if("entityrecord"===a.searchParams.get("pagetype")){var n=void 0;l.__preload&&(n=l.__preload.userId);var r=a.searchParams.get("etn"),o=a.searchParams.get("id"),s=void 0;if(r)for(var c=0;c<d.length;c++)if(d[c].etn===r){s=d[c].entitySetName;break}if(r&&o&&s&&n){var p="".concat(r,"_").concat(o),f="".concat(s,"(").concat(o,")");l.__Prefetched_formData={},l.__Prefetched_formData[p]=[],u("".concat(e).concat(f),p,0),u(e+"systemusers("+n+')/Microsoft.Dynamics.CRM.RetrievePrincipalAccess(Target=@Target)?@Target={"@odata.id":"'+f+'"}',p,1),u(e+'RetrieveProcessControlData(Target=@Target,ProcessId=@ProcessId,ProcessInstanceId=@ProcessInstanceId)?@Target={"@odata.id":"'+f+'"}&@ProcessId=null&@ProcessInstanceId=null',p,2)}}}}(f)}}();
+	</script>
+
+	<!-- css -->
+	<link href="https://content.powerapps.com/resource/uci-infra/resources/styles/Styles.4ce9d3bfee43ec16c3b2083b2978d769.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<div id="error-app-loading-indicator">
+		<div id="app-loading-indicator" class="indeterminateProgressRing">
+			<div class="progressDot"></div>
+			<div class="progressDot"></div>
+			<div class="progressDot"></div>
+			<div class="progressDot"></div>
+			<div class="progressDot"></div>
+		</div>
+		<div id="errorPopup-container"></div>
+		<div id="errorLoadingMessage" style="opacity: 0"></div>
+	</div>
+
+	<script type="text/javascript" nomodule src="https://content.powerapps.com/resource/uci-infra/scripts/es5/vendor.5148193b682da240c0c7e4f8f5e19cf1.js" crossorigin></script>
+	<script type="module" src="https://content.powerapps.com/resource/uci-infra/scripts/vendor.07658634e8fa94d95fa7b116152658b3.js" crossorigin></script>
+	<script type="text/javascript" nomodule src="https://content.powerapps.com/resource/uci-infra/scripts/es5/corejs.ec229303b281b8ea954ded7bb3f3916d.js" crossorigin></script>
+	<script type="module" src="https://content.powerapps.com/resource/uci-infra/scripts/corejs.2feecc59a9928698a1f1c975696b4f85.js" crossorigin></script>
+
+	<script id="errorPopup-template" type="text/template">
+		<div class="errorPopup-wrapper">
+			<div id="errorPopup-header"></div>
+			<div id="errorPopup-sessionDetails"></div>
+			<a href="#" id="errorPopup-detailsLink"></a>
+			<div id="errorPopup-technicalDetails"></div>	
+		</div>
+	</script>
+
+	<script id="waiting-message-template" type="text/template">
+		<div id="app-waiting-message"></div>
+	</script>
+
+
+	<script defer type="text/javascript" src="https://content.powerapps.com/resource/uci-infra/scripts/errorHandlers.7c10af6e9e59562928cb54e14b47ac1c.js" ></script>
+
+	<script type="text/javascript" src="https://content.powerapps.com/resource/uci-infra/scripts/MicrosoftAjax.657d7ebf9cb17f1ae3593257dcfc1ae8.js" crossorigin></script>
+
+	<div id="shell-container" style="display: flex; overflow: hidden"></div>
+
+	<script type="text/javascript">
+		/*~Uci Version Details~*/
+		var VERSION_NUMERIC_VALUE = "1.4.6248-2308.2";
+		var LAST_BUILD_TIME = "Thu, 31 Aug 2023 01:04:07 GMT";
+		var SERVER_VERSION_VALUE = "9100000000"
+		var CLIENT_VERSION_VALUE = "9000000000";
+	</script>
+
+	<script type="text/javascript" nomodule src="https://content.powerapps.com/resource/uci-infra/scripts/es5/app.fef01b20503f60f886abb82190bc374a.js" crossorigin></script>
+	<script type="module" src="https://content.powerapps.com/resource/uci-infra/scripts/app.74051a71263dffd6bccc18a135bb5948.js" crossorigin></script>
+
+	<div id="PortalRoot" role="presentation"></div>
+</body>
+</html>

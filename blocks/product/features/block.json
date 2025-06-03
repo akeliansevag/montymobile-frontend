@@ -1,0 +1,13 @@
+{
+    "name": "acf/features",
+    "title": "Product features",
+    "description": "The features of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["features"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "features.php"
+    },
+    "align": "full"
+}

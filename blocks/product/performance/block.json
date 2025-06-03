@@ -1,0 +1,13 @@
+{
+    "name": "acf/performance",
+    "title": "Product performance",
+    "description": "The performance of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["performance"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "performance.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,13 @@
+{
+    "name": "acf/solutions",
+    "title": "Product Solutions",
+    "description": "The Solutions of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["solutions"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "solutions.php"
+    },
+    "align": "full"
+}

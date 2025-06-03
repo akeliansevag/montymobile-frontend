@@ -1,0 +1,13 @@
+{
+    "name": "acf/left-right",
+    "title": "Product left-right",
+    "description": "The left-right of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["left-right"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "left-right.php"
+    },
+    "align": "full"
+}

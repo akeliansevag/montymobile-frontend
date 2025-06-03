@@ -1,0 +1,13 @@
+{
+    "name": "acf/categories",
+    "title": "Product categories",
+    "description": "The categories of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["categories"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "categories.php"
+    },
+    "align": "full"
+}

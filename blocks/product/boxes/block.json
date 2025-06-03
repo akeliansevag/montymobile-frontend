@@ -1,0 +1,13 @@
+{
+    "name": "acf/boxes",
+    "title": "Product boxes",
+    "description": "The boxes of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["boxes"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "boxes.php"
+    },
+    "align": "full"
+}

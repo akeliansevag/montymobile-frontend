@@ -1,0 +1,13 @@
+{
+    "name": "acf/related",
+    "title": "Product related",
+    "description": "The related of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["related"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "related.php"
+    },
+    "align": "full"
+}

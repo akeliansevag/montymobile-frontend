@@ -1,0 +1,13 @@
+{
+    "name": "acf/scroll-to-id",
+    "title": "Product scroll-to-id",
+    "description": "The scroll-to-id of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["scroll-to-id"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "scroll-to-id.php"
+    },
+    "align": "full"
+}

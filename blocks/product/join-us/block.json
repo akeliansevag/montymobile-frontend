@@ -1,0 +1,13 @@
+{
+    "name": "acf/join-us",
+    "title": "Product Join us",
+    "description": "The Join us of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["join-us"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "join-us.php"
+    },
+    "align": "full"
+}

@@ -1,0 +1,13 @@
+{
+    "name": "acf/text-description",
+    "title": "Product Product Text/Description",
+    "description": "The text-description of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["text-description"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "text-description.php"
+    },
+    "align": "full"
+}

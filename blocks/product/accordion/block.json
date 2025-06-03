@@ -1,0 +1,13 @@
+{
+    "name": "acf/accordion",
+    "title": "Product accordion",
+    "description": "The accordion of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["accordion"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "accordion.php"
+    },
+    "align": "full"
+}

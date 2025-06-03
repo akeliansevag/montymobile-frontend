@@ -1,0 +1,13 @@
+{
+    "name": "acf/table",
+    "title": "Product table",
+    "description": "The table of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["table"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "table.php"
+    },
+    "align": "full"
+}

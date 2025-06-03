@@ -1,0 +1,13 @@
+{
+    "name": "acf/info",
+    "title": "Product info",
+    "description": "The info of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["info"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "info.php"
+    },
+    "align": "full"
+}

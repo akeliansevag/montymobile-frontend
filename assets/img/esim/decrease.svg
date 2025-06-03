@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="16.5" viewBox="0 0 17 16.5">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ed2126"/>
+      <stop offset="1" stop-color="#ed204c"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_4066" data-name="Group 4066" transform="translate(-720 -1514)">
+    <path id="Polygon_5" data-name="Polygon 5" d="M7.645,1.408a1,1,0,0,1,1.71,0l6.723,11.073A1,1,0,0,1,15.223,14H1.777a1,1,0,0,1-.855-1.519Z" transform="translate(737 1528) rotate(180)" fill="url(#linear-gradient)"/>
+    <path id="Polygon_6" data-name="Polygon 6" d="M8,0l8,13H0Z" transform="translate(736.5 1530) rotate(180)" fill="none" stroke="#b7b7b7" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" stroke-dasharray="2 2"/>
+  </g>
+</svg>

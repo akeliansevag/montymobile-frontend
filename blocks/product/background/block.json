@@ -1,0 +1,13 @@
+{
+    "name": "acf/background",
+    "title": "Product background",
+    "description": "The background of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["background"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "background.php"
+    },
+    "align": "full"
+}

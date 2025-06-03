@@ -1,0 +1,13 @@
+{
+    "name": "acf/top-banner",
+    "title": "Product Top Banner",
+    "description": "The Top Banner of the product page",
+    "category": "formatting",
+    "icon": "admin-comments",
+    "keywords": ["top-banner"],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "top-banner.php"
+    },
+    "align": "full"
+}
