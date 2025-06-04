@@ -496,17 +496,16 @@
 </div>
 <section class="sign-up-section">
     <div class="sign-up-one">
-        <img class="hands-background" src="<?= get_template_directory_uri() ?>/assets/img/ottbg.webp" alt="OTT">
+        <img class="hands-background" src="<?= get_template_directory_uri() ?>/assets/img/rsp-banner.webp" alt="OTT">
         <img class="mm-emblem" src="<?= get_template_directory_uri() ?>/assets/img/monty-emblem.webp" alt="Monty Mobile Emblem">
         <div class="sign-up-content">
             <img class="mm-logo" src="<?= get_template_directory_uri() ?>/assets/img/monty-mobile-logo.webp" alt="Monty Mobile Logo">
             <p>
-                Optimize Spending with Monty Mobile’s A2P Wholesale Solution.
+                Monty Mobile Instant-Connectivity RSP Platform
             </p>
             <p>
-                Stay connected with your customers effortlessly. Monty Mobile’s OTT & A2P messaging solutions can give your business the flexibility, reach, and reliability it needs to thrive in today’s fast-paced world. Empower your communications with secure OTPs, urgent notifications, and engaging marketing messages that build trust and drive results.
+                Monty’s Instant-Connectivity RSP platform enables seamless Remote SIM Provisioning, allowing you to securely deliver, manage, and bind eSIM profiles to consumer and IoT devices anytime, anywhere. No physical SIM cards. No manual logistics. Designed for MNOs, MVNOs, and IoT providers aiming to streamline SIM lifecycle management and stay future-ready.
             </p>
-            <p><strong>Why Monty Mobile OTT/A2P Wholesale Solution?</strong></p>
             <ul>
                 <li>
                     <span>
@@ -515,7 +514,10 @@
                             <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
                         </svg>
                     </span>
-                    <span>Increased Customer Engagement & Loyalty</span>
+                    <span>
+                        <h4>Remote Activation Made Simple</h4>
+                        <span>Provision and manage eSIMs instantly, over-the-air.</span>
+                    </span>
 
                 </li>
                 <li>
@@ -525,7 +527,10 @@
                             <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
                         </svg>
                     </span>
-                    <span>Reliable & Secure Messaging</span>
+                    <span>
+                        <h4>GSMA-COMPLIANT AND SCALABLE</h4>
+                        <span>Fully aligned with GSMA SGP.22 and SGP.32 specifications.</span>
+                    </span>
                 </li>
                 <li>
                     <span>
@@ -534,7 +539,23 @@
                             <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
                         </svg>
                     </span>
-                    <span>Scalability & Cost Reduction</span>
+                    <span>
+                        <h4>REDUCE OPERATIONAL OVERHEADS</h4>
+                        <span>No need for physical SIM distribution or manual intervention.</span>
+                    </span>
+                </li>
+
+                <li>
+                    <span>
+                        <svg id="checked" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+                            <path id="Path_420" data-name="Path 420" d="M.214,13.248A15.8,15.8,0,0,1,7.136,2.674,15.716,15.716,0,0,1,15.976,0a1.181,1.181,0,0,1,1.2,1.114,1.159,1.159,0,0,1-1.065,1.27c-.673.073-1.354.077-2.024.167A13.1,13.1,0,0,0,7.346,5.517a13.055,13.055,0,0,0-4.509,7.036,13.222,13.222,0,0,0,3.04,12.511,12.91,12.91,0,0,0,7.949,4.354A13.236,13.236,0,0,0,24.9,26.244a12.947,12.947,0,0,0,4.224-6.787,28.717,28.717,0,0,0,.446-2.988c.024-.175.009-.355.029-.53a1.181,1.181,0,0,1,1.282-1.129A1.2,1.2,0,0,1,32,16.073a14.365,14.365,0,0,1-.575,4.164,15.825,15.825,0,0,1-11.586,11.29,24.337,24.337,0,0,1-2.647.433,18.958,18.958,0,0,1-2.392,0,15.474,15.474,0,0,1-6.99-2.2,15.807,15.807,0,0,1-7.6-11A18.937,18.937,0,0,1,.214,13.248Z" transform="translate(-0.004 0)" />
+                            <path id="Path_421" data-name="Path 421" d="M104.206,66.671a2.293,2.293,0,0,1,.243-.38q7.212-7.2,14.427-14.4a1.369,1.369,0,0,1,1.281-.5,1.229,1.229,0,0,1,.755,1.951,2.988,2.988,0,0,1-.283.307q-7.726,7.709-15.455,15.417a1.287,1.287,0,0,1-2.122-.041q-3-3.251-5.988-6.5A1.267,1.267,0,0,1,97,60.706a1.235,1.235,0,0,1,1.827.073c.714.756,1.412,1.526,2.116,2.291q1.535,1.667,3.069,3.336c.043.048.076.1.192.266Z" transform="translate(-89.743 -47.229)" fill="#ed204c" />
+                        </svg>
+                    </span>
+                    <span>
+                        <h4>FUTURE-READY INFRASTRUCTURE</h4>
+                        <span>Optimized for MNOs, MVNOs, and IoT deployments at scale.</span>
+                    </span>
                 </li>
 
             </ul>
@@ -1179,6 +1200,10 @@
             console.error("RSP_FORWARD_URL is empty—cannot fetch");
             addGeneralError("Internal error: endpoint not found.");
             formLoader.classList.remove("active");
+            return;
+        }
+
+        if (!isValid) {
             return;
         }
 
