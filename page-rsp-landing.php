@@ -1235,9 +1235,10 @@
                                 addGeneralError(json.data || 'An unexpected error occurred.');
                                 return;
                             }
-                            openPopup({
-                                status: "mail_sent"
-                            });
+                            window.location.href = "/thank-you";
+                            // openPopup({
+                            //     status: "mail_sent"
+                            // });
                             signUpForm.reset();
                         })
                         .catch((error) => {
