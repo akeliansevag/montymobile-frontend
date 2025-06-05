@@ -1216,6 +1216,7 @@
                 )
                 .then((token) => {
                     const data = new FormData();
+                    console.log(token);
                     data.append('FirstName', FirstName.value);
                     data.append('LastName', LastName.value);
                     data.append('Email', Email.value);
