@@ -844,7 +844,7 @@
     </div>
 </section>
 
-<script src="https://www.google.com/recaptcha/api.js?render=6Lc6klUrAAAAAILhgLuyUlOz2yOpotfF302sEhd0"></script>
+<script src="https://www.google.com/recaptcha/api.js?render=6LdXblYrAAAAAGShRGcacsdJMxXADScrArqSR4YN"></script>
 <script>
     // 1. PHP echoes the admin-post URL into a JS variable:
     const RSP_FORWARD_URL = '<?php echo esc_url(admin_url("admin-post.php?action=rsp_forward")); ?>';
@@ -1210,13 +1210,12 @@
         // Use Enterprise API’s callback style:
         grecaptcha.ready(() => {
             grecaptcha.execute(
-                    '6Lc6klUrAAAAAILhgLuyUlOz2yOpotfF302sEhd0', {
-                        action: 'rsp_submit'
+                    '6LdXblYrAAAAAGShRGcacsdJMxXADScrArqSR4YN', {
+                        action: 'submit'
                     }
                 )
                 .then((token) => {
                     const data = new FormData();
-                    console.log("token: " + token);
                     data.append('FirstName', FirstName.value);
                     data.append('LastName', LastName.value);
                     data.append('Email', Email.value);
