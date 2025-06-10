@@ -564,7 +564,7 @@
     <div class="sign-up-two">
         <img class="logo-pattern" src="<?= get_template_directory_uri() ?>/assets/img/logo-pattern.webp" alt="logo Pattern">
         <div class="sign-up-form-container">
-            <h1><strong>Welcome to Monty Mobile’s <br /> A2P Wholesale Solution</strong>
+            <h1><strong>Welcome to Monty Mobile’s <br /> Instant-Connectivity RSP Platform</strong>
             </h1>
 
             <div class="sign-up-form">
