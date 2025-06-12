@@ -3356,6 +3356,248 @@ section.color-white {
   font-size: 18px;
   letter-spacing: 1px;
 }
+
+.developers-banner {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60vh;
+}
+
+.developers-banner > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.developers-banner div.dev-content {
+  max-width: 470px;
+}
+.developers-banner h1 {
+  text-align: left;
+  color: white;
+}
+
+.developers-banner p {
+  color: white;
+}
+
+.pattern-image {
+  width: 100%;
+  transform: rotate(10deg);
+}
+
+.code-block {
+  position: relative;
+  border: 1px solid #dee2e6;
+  border-radius: 30px;
+  padding: 1.5rem;
+  font-family: monospace;
+  /* white-space: pre; */
+  overflow-x: auto;
+  word-wrap: break-word;
+  margin-top: 30px;
+}
+
+.code-block.dark {
+  background-color: #212529;
+  color: #f8f9fa;
+  margin-top: 15px;
+}
+
+.code-black-wrapper {
+  background-color: black;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.copy-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: 0;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.code-block.dark .copied-text {
+  color: white;
+}
+
+.code-block.dark .copy-btn svg path {
+  fill: white;
+}
+
+.code-inner-title {
+  background-color: #00000015;
+  border-radius: 15px;
+  text-align: center;
+  padding: 10px;
+  display: inline-block;
+}
+
+.code-block.dark .code-inner-title {
+  color: white;
+  background-color: #ffffff15;
+}
+
+.white-block {
+  border-radius: 30px;
+  padding: 20px 30px;
+  box-shadow: 0px 0px 13px -3px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 0px 0px 13px -3px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 0px 0px 13px -3px rgba(0, 0, 0, 0.37);
+  margin-bottom: 15px;
+}
+.white-block h3 {
+  margin: 0;
+}
+.white-block h3 span {
+  color: var(--mmPink);
+}
+.black-separator {
+  height: 1px;
+  background: black;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.dev-item {
+  position: relative;
+  display: flex;
+  gap: 10px;
+}
+
+.dev-item > span:first-child {
+  display: flex;
+  gap: 5px;
+  width: 200px;
+}
+
+.dev-item > span:nth-child(2) {
+  width: 60%;
+  word-wrap: break-word;
+  padding-right: 40px;
+}
+
+.dev-item > span:first-child::before {
+  content: " ";
+  width: 18px;
+  height: 18px;
+  display: block;
+  border-radius: 50px;
+  border: 5px solid var(--mmPink);
+  background-color: white;
+  box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.29);
+  -webkit-box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.29);
+  -moz-box-shadow: 0px 0px 7px 2px rgba(255, 0, 0, 0.29);
+}
+
+.dev-content-wrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap; /* allow wrapping if space is limited */
+}
+
+.dev-content-wrapper > div:first-child {
+  flex: 0 0 300px;
+  max-width: 100%;
+}
+
+.dev-content-wrapper > div:nth-child(2) {
+  flex: 1 1 0;
+  min-width: 0; /* important to allow shrinking */
+  padding-right: 30px;
+  padding-left: 30px;
+}
+
+.dev-menu {
+  background-color: black;
+  color: white;
+  border-radius: 0 30px 30px 0;
+  overflow: hidden;
+  min-height: 70vh;
+}
+
+.dev-menu h5 {
+  color: var(--mmPink);
+  padding: 30px;
+}
+
+.dev-menu-content > ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.dev-link-parent a {
+  color: white;
+}
+
+.dev-link-toggle svg path {
+  fill: white;
+}
+
+.dev-link-parent.current {
+  background-color: white;
+}
+.dev-link-parent.current a {
+  color: black;
+}
+
+.dev-page-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+}
+
+.dev-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.dev-link > div:nth-child(2) {
+  padding-top: 3px;
+}
+
+.dev-link-children {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style-type: none;
+  padding: 5px 30px 15px 30px;
+}
+
+.dev-link-parent.current .dev-link-toggle svg path {
+  fill: black;
+}
+
+.dev-link-parent.current .dev-link svg path {
+  fill: var(--mmPink);
+}
+
+.dev-link-toggle svg {
+  transition: all 0.1s linear;
+}
+.dev-link-toggle[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.dev-link-children a:hover {
+  color: var(--mmPink);
+}
+
 /*------------------------------------*\
     RESPONSIVE
 \*------------------------------------*/
@@ -3616,6 +3858,22 @@ section.color-white {
     padding-left: 0;
     padding-right: 0;
   }
+  .dev-content-wrapper {
+    flex-direction: column;
+  }
+  .dev-content-wrapper > div:nth-child(2) {
+    flex: 1;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .dev-menu {
+    min-height: auto;
+    border-radius: 0;
+  }
+  .white-block {
+    padding: 20px 20px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -3740,6 +3998,17 @@ section.color-white {
 
   .buttons {
     flex-direction: column;
+  }
+  .dev-item {
+    flex-direction: column;
+  }
+
+  .dev-item > span:first-child {
+    width: 100%;
+  }
+
+  .dev-item > span:nth-child(2) {
+    width: 100%;
   }
 }
 

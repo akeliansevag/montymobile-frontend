@@ -145,7 +145,7 @@ function montymobile_scripts()
 	// if (!is_page('mcp-landing')) {
 	// 	wp_enqueue_script('chatbot-js', get_template_directory_uri() . '/js/chatbot.js', array("jquery"), _S_VERSION, true);
 	// }
-
+	wp_enqueue_script('montymobile-developers-js', get_template_directory_uri() . '/js/developers.js', array("jquery"), _S_VERSION, true);
 	wp_enqueue_script('montymobile-js', get_template_directory_uri() . '/js/scripts.js', array("jquery"), _S_VERSION, true);
 }
 add_action('wp_enqueue_scripts', 'montymobile_scripts');
