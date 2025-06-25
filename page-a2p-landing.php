@@ -1297,7 +1297,7 @@
                                 addGeneralError(json.data || 'An unexpected error occurred.');
                                 return;
                             }
-                            window.location.href = "/thank-you";
+                            window.location.href = "/thank-you-a2p";
                             // openPopup({
                             //     status: "mail_sent"
                             // });
