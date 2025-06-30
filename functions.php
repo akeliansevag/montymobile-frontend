@@ -12,6 +12,17 @@ if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
 	define('_S_VERSION', '10.1.9');
 }
+function remove_jquery_migrate($scripts)
+{
+	if (! is_admin() && isset($scripts->registered['jquery'])) {
+		$script = $scripts->registered['jquery'];
+
+		if ($script->deps) { // Check if jQuery has any dependencies
+			$script->deps = array_diff($script->deps, array('jquery-migrate'));
+		}
+	}
+}
+add_action('wp_default_scripts', 'remove_jquery_migrate');
 
 //add_filter('wpcf7_spam', '__return_false');
 

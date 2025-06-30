@@ -582,7 +582,8 @@
             </h1>
 
             <div class="sign-up-form">
-                <form id="signUpForm" action="">
+                <form id="signUpForm" action="" method="post">
+                    <?php wp_nonce_field('submit_forum_form_action', 'forum_form_nonce'); ?>
                     <div class="two-columns">
                         <div class="input-wrapper">
                             <label for="CompanyName">Company Name</label>
@@ -1150,6 +1151,7 @@
         var Phone = document.querySelector('input[name="Phone"]');
         var CompanyName = document.querySelector('input[name="CompanyName"]');
 
+        var forum_form_nonce = document.querySelector('input[name="forum_form_nonce"]');
 
 
         var terms = document.querySelector('input[name="terms"]');
@@ -1277,6 +1279,7 @@
                 )
                 .then((token) => {
                     const data = new FormData();
+                    data.append('forum_form_nonce', forum_form_nonce.value);
                     data.append('CompanyName', CompanyName.value);
                     data.append('FullName', FullName.value);
                     data.append('Email', Email.value);

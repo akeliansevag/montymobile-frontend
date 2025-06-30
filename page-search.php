@@ -3,7 +3,7 @@
 <?php
 $q = null;
 if (isset($_GET['q'])) {
-    $q = $_GET['q'];
+    $q = esc_html($_GET['q']);
 }
 if (get_query_var('paged')) {
     $paged = get_query_var('paged');
@@ -50,7 +50,7 @@ $cats = get_terms($term_args);
                                     <div class="card-item">
                                         <h4 class="card-title fs-5"><a href="<?= get_term_link($cat->term_id, 'product-category'); ?>"><?= $cat->name ?></a></h4>
                                         <p>
-                                        <p class="truncate"><?= $description ? str_replace(['<p>','</p>'], '', $description ) : "" ?></p>
+                                        <p class="truncate"><?= $description ? str_replace(['<p>', '</p>'], '', $description) : "" ?></p>
                                         <a href="<?= get_term_link($cat->term_id, 'product-category'); ?>" class="text-decoration-underline"><i>learn more</i></a>
                                         </p>
 
@@ -70,7 +70,7 @@ $cats = get_terms($term_args);
                                     <div class="card-item">
                                         <h4 class="card-title fs-5"><a href="<?= get_permalink($p->ID); ?>"><?= $p->post_title ?></a></h4>
                                         <p>
-                                        <p class="truncate"><?= $description ? str_replace(['<p>','</p>'], '', $description ) : "" ?></p>
+                                        <p class="truncate"><?= $description ? str_replace(['<p>', '</p>'], '', $description) : "" ?></p>
                                         <a href="<?= get_permalink($p->ID); ?>" class="text-decoration-underline"><i>learn more</i></a>
                                         </p>
 
