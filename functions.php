@@ -12,6 +12,38 @@ if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
 	define('_S_VERSION', '10.1.9');
 }
+
+add_action('init', function () {
+	if (is_user_logged_in() && headers_sent() === false) {
+		// Force session cookie parameters if using PHP sessions
+		ini_set('session.cookie_secure', '1');
+		ini_set('session.cookie_httponly', '1');
+		ini_set('session.cookie_samesite', 'Strict');
+	}
+}, 1);
+
+add_filter('send_auth_cookies', function () {
+	// This prevents default Set-Cookie headers so we can re-set with security flags
+	foreach (headers_list() as $header) {
+		if (stripos($header, 'Set-Cookie:') !== false) {
+			header_remove('Set-Cookie');
+		}
+	}
+
+	// Re-set all cookies securely
+	foreach ($_COOKIE as $name => $value) {
+		setcookie($name, $value, [
+			'expires'  => time() + 3600,
+			'path'     => COOKIEPATH,
+			'domain'   => COOKIE_DOMAIN,
+			'secure'   => is_ssl(),
+			'httponly' => true,
+			'samesite' => 'Strict',
+		]);
+	}
+	return false; // suppress default cookie behavior
+}, 999);
+
 function remove_jquery_migrate($scripts)
 {
 	if (! is_admin() && isset($scripts->registered['jquery'])) {
