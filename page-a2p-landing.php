@@ -986,14 +986,6 @@
             select.style.color = "gray";
         }
     }
-    // var onloadCallback = function() {
-    //     grecaptcha.render('recaptcha-container', {
-    //         'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5',
-    //         'callback': onReCaptchaSuccess
-    //     });
-    // };
-
-
 
     var signUpForm = document.getElementById("signUpForm");
     var closePopupButton = document.getElementById("close-popup");
@@ -1155,7 +1147,6 @@
 
 
         var terms = document.querySelector('input[name="terms"]');
-        //var recaptchaResponse = grecaptcha.getResponse();
 
         var FullNameError = document.getElementById('FullNameError');
         var EmailError = document.getElementById('EmailError');
@@ -1168,15 +1159,6 @@
         var termsError = document.getElementById('termsError');
 
         var isValid = true;
-
-        // Validate reCAPTCHA
-        // if (recaptchaResponse.length === 0) {
-        //     showError(false, recaptchaError, 'Please complete the reCAPTCHA.');
-        //     isValid = false;
-        // } else {
-        //     clearError(false, recaptchaError);
-        // }
-
 
 
         if (!FullName.value) {
@@ -1316,54 +1298,5 @@
                 });
         });
     });
-
-
-    // const getIndustries = async () => {
-    //     const apiUrl = 'https://digital-services-api-software-qa.montylocal.net/api-gateway/crm-middleware/api/v1/EsimA2P/get-industries';
-    //     const select = document.getElementById('industry');
-
-    //     // 1. Show loading state
-    //     select.innerHTML = '<option>Loading industries…</option>';
-    //     select.disabled = true;
-
-    //     try {
-    //         // 2. Fetch with your headers
-    //         const res = await fetch(apiUrl, {
-    //             method: 'GET',
-    //             headers: {
-    //                 'Accept': '*/*',
-    //                 'LanguageCode': 'en',
-    //                 'Tenant': '4efca093-86e4-416f-98c0-bdf3376061bb',
-    //                 'Content-Type': 'application/json'
-    //             }
-    //         });
-
-    //         if (!res.ok) {
-    //             throw new Error(`HTTP ${res.status} – ${res.statusText}`);
-    //         }
-
-    //         const json = await res.json();
-
-    //         // 3. Populate on success
-    //         const industries = json.data.data;
-    //         select.innerHTML = '<option value="">Select industry</option>';
-    //         industries.forEach(item => {
-    //             const opt = document.createElement('option');
-    //             opt.value = item.industry;
-    //             opt.textContent = item.name;
-    //             select.appendChild(opt);
-    //         });
-    //     } catch (err) {
-    //         console.error('Failed to load industries:', err);
-    //         // 4. Show error state
-    //         select.innerHTML = '<option value="">Failed to load industries</option>';
-    //     } finally {
-    //         // Always re-enable
-    //         select.disabled = false;
-    //     }
-    // };
-
-    // // Kick it off once the DOM is ready:
-    // document.addEventListener('DOMContentLoaded', getIndustries);
 </script>
 <?php get_footer(); ?>

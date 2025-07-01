@@ -838,8 +838,7 @@
                         <span class="loader"></span>
                     </div>
                 </form>
-                <!-- <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
-                </script> -->
+
             </div>
         </div>
     </div>
@@ -857,12 +856,7 @@
             select.style.color = "gray";
         }
     }
-    // var onloadCallback = function() {
-    //     grecaptcha.render('recaptcha-container', {
-    //         'sitekey': '6LfiJhEqAAAAAEnjPS42yZIuL6OMKbaZIl-i4rQ5',
-    //         'callback': onReCaptchaSuccess
-    //     });
-    // };
+
 
 
 
@@ -1032,15 +1026,6 @@
 
         var isValid = true;
 
-        // Validate reCAPTCHA
-        // if (recaptchaResponse.length === 0) {
-        //     showError(false, recaptchaError, 'Please complete the reCAPTCHA.');
-        //     isValid = false;
-        // } else {
-        //     clearError(false, recaptchaError);
-        // }
-
-
 
         if (!FirstName.value) {
             showError(FirstName, FirstNameError, 'First Name is required.');
@@ -1113,93 +1098,6 @@
             clearError(terms, termsError);
         }
 
-        // if (isValid) {
-        //     var data = new FormData();
-        //     data.append('FirstName', FirstName.value);
-        //     data.append('LastName', LastName.value);
-        //     data.append('Email', Email.value);
-        //     data.append('phoneNumber', phoneNumber.value);
-        //     data.append('Country', Country.value);
-        //     data.append('Phone', Phone.value);
-        //     data.append('CompanyName', CompanyName.value);
-
-        //     fetch('https://montymobile.com/wp-json/contact-form-7/v1/contact-forms/25777/feedback', {
-        //             method: 'POST',
-        //             headers: {
-        //                 'LanguageCode': 'en',
-        //             },
-        //             body: data
-        //         })
-        //         .then(response => response.json())
-        //         .then(data => {
-        //             // Reset reCAPTCHA
-        //             //grecaptcha.reset();
-        //             formLoader.classList.remove("active");
-        //             if (data && !data.status == "mail_sent") {
-        //                 addGeneralError(data.message);
-        //                 return;
-        //             }
-
-        //             if (data && data.status == "mail_sent") {
-        //                 document.getElementById('error-container').innerHTML = '';
-        //                 currentEmail = companyEmail.value;
-        //                 openPopup(data, companyEmail.value, false);
-        //                 // Call gtag_report_conversion here
-        //                 //gtag_report_conversion();
-        //             }
-
-        //             signUpForm.reset();
-
-        //         })
-        //         .catch((error) => {
-        //             // Reset reCAPTCHA
-        //             //grecaptcha.reset();
-        //             formLoader.classList.remove("active");
-        //             //console.log('Error:', error);
-        //             //openPopup(error, companyEmail.value, true);
-        //             addGeneralError("An error occurred");
-        //             //signUpForm.reset();
-        //         });
-        // }
-
-
-        // if (isValid) {
-        //     grecaptcha.ready(function() {
-        //         grecaptcha.execute('6LffXFQrAAAAAATOAiQEgn9WX01eZ0QkSs2Utli1', {
-        //             action: 'rsp_submit'
-        //         }).then(function(token) {
-        //             var data = new FormData();
-        //             data.append('FirstName', FirstName.value);
-        //             data.append('LastName', LastName.value);
-        //             data.append('Email', Email.value);
-        //             data.append('Country', Country.value);
-        //             data.append('Phone', Phone.value);
-        //             data.append('CompanyName', CompanyName.value);
-        //             data.append('recaptcha_token', token);
-
-        //             fetch(RSP_FORWARD_URL, {
-        //                     method: 'POST',
-        //                     body: data
-        //                 })
-        //                 .then(response => response.json())
-        //                 .then(json => {
-        //                     formLoader.classList.remove("active");
-        //                     if (!json.success) {
-        //                         addGeneralError(json.data || 'An unexpected error occurred.');
-        //                         return;
-        //                     }
-        //                     openPopup({
-        //                         status: "mail_sent"
-        //                     });
-        //                     signUpForm.reset();
-        //                 })
-        //                 .catch((error) => {
-        //                     formLoader.classList.remove("active");
-        //                     addGeneralError("An error occurred: " + error.message);
-        //                 });
-        //         });
-        //     });
-        // }
 
         if (!RSP_FORWARD_URL) {
             console.error("RSP_FORWARD_URL is empty—cannot fetch");
