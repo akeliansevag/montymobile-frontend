@@ -12,58 +12,6 @@ if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
 	define('_S_VERSION', '10.1.9');
 }
-
-// Set Secure, HttpOnly, and SameSite=Strict for all main WordPress cookies
-
-// Set the "logged_in" cookie
-add_action('set_logged_in_cookie', function ($logged_in_cookie) {
-	$expire = time() + 1209600; // 14 days
-	setcookie(
-		LOGGED_IN_COOKIE,
-		$logged_in_cookie,
-		[
-			'expires'  => $expire,
-			'path'     => COOKIEPATH,
-			'domain'   => COOKIE_DOMAIN,
-			'secure'   => is_ssl(),
-			'httponly' => true,
-			'samesite' => 'Strict',
-		]
-	);
-}, 10, 1);
-
-// Set the "auth" cookie (used for verifying login)
-add_action('set_auth_cookie', function ($auth_cookie, $expire, $expiration, $user_id, $scheme) {
-	setcookie(
-		AUTH_COOKIE,
-		$auth_cookie,
-		[
-			'expires'  => $expire,
-			'path'     => PLUGINS_COOKIE_PATH,
-			'domain'   => COOKIE_DOMAIN,
-			'secure'   => is_ssl(),
-			'httponly' => true,
-			'samesite' => 'Strict',
-		]
-	);
-}, 10, 5);
-
-// Set the "secure_auth" cookie (used for HTTPS logins/admin)
-add_action('set_secure_auth_cookie', function ($secure_auth_cookie, $expire) {
-	setcookie(
-		SECURE_AUTH_COOKIE,
-		$secure_auth_cookie,
-		[
-			'expires'  => $expire,
-			'path'     => ADMIN_COOKIE_PATH,
-			'domain'   => COOKIE_DOMAIN,
-			'secure'   => true,
-			'httponly' => true,
-			'samesite' => 'Strict',
-		]
-	);
-}, 10, 2);
-
 function remove_jquery_migrate($scripts)
 {
 	if (! is_admin() && isset($scripts->registered['jquery'])) {
