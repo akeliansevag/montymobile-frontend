@@ -1068,6 +1068,9 @@
         } else if (!isValidEmail(Email.value)) {
             showError(Email, EmailError, 'Please enter a valid email address.');
             isValid = false;
+        } else if (/^[^@]+(\+[^@]+)@[^@]+$/.test(Email.value)) {
+            showError(Email, EmailError, 'Please use your primary email address without "+" aliases.');
+            isValid = false;
         } else {
             clearError(Email, EmailError);
         }
