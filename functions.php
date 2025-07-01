@@ -13,36 +13,56 @@ if (!defined('_S_VERSION')) {
 	define('_S_VERSION', '10.1.9');
 }
 
-add_action('init', function () {
-	if (is_user_logged_in() && headers_sent() === false) {
-		// Force session cookie parameters if using PHP sessions
-		ini_set('session.cookie_secure', '1');
-		ini_set('session.cookie_httponly', '1');
-		ini_set('session.cookie_samesite', 'Strict');
-	}
-}, 1);
+// Set Secure, HttpOnly, and SameSite=Strict for all main WordPress cookies
 
-add_filter('send_auth_cookies', function () {
-	// This prevents default Set-Cookie headers so we can re-set with security flags
-	foreach (headers_list() as $header) {
-		if (stripos($header, 'Set-Cookie:') !== false) {
-			header_remove('Set-Cookie');
-		}
-	}
-
-	// Re-set all cookies securely
-	foreach ($_COOKIE as $name => $value) {
-		setcookie($name, $value, [
-			'expires'  => time() + 3600,
+// Set the "logged_in" cookie
+add_action('set_logged_in_cookie', function ($logged_in_cookie) {
+	$expire = time() + 1209600; // 14 days
+	setcookie(
+		LOGGED_IN_COOKIE,
+		$logged_in_cookie,
+		[
+			'expires'  => $expire,
 			'path'     => COOKIEPATH,
 			'domain'   => COOKIE_DOMAIN,
 			'secure'   => is_ssl(),
 			'httponly' => true,
 			'samesite' => 'Strict',
-		]);
-	}
-	return false; // suppress default cookie behavior
-}, 999);
+		]
+	);
+}, 10, 1);
+
+// Set the "auth" cookie (used for verifying login)
+add_action('set_auth_cookie', function ($auth_cookie, $expire, $expiration, $user_id, $scheme) {
+	setcookie(
+		AUTH_COOKIE,
+		$auth_cookie,
+		[
+			'expires'  => $expire,
+			'path'     => PLUGINS_COOKIE_PATH,
+			'domain'   => COOKIE_DOMAIN,
+			'secure'   => is_ssl(),
+			'httponly' => true,
+			'samesite' => 'Strict',
+		]
+	);
+}, 10, 5);
+
+// Set the "secure_auth" cookie (used for HTTPS logins/admin)
+add_action('set_secure_auth_cookie', function ($secure_auth_cookie, $expire) {
+	setcookie(
+		SECURE_AUTH_COOKIE,
+		$secure_auth_cookie,
+		[
+			'expires'  => $expire,
+			'path'     => ADMIN_COOKIE_PATH,
+			'domain'   => COOKIE_DOMAIN,
+			'secure'   => true,
+			'httponly' => true,
+			'samesite' => 'Strict',
+		]
+	);
+}, 10, 2);
 
 function remove_jquery_migrate($scripts)
 {
