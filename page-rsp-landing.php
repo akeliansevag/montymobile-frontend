@@ -571,7 +571,7 @@
                 <form id="signUpForm" action="" method="post">
                     <?php
                     $unique_action = 'my_action_' . wp_generate_uuid4();
-                    wp_nonce_field($unique_action, 'my_nonce');
+                    wp_nonce_field($unique_action, 'rsp_nonce');
                     ?>
                     <!-- <?php wp_nonce_field('submit_forum_form_action', 'forum_form_nonce'); ?> -->
                     <div class="two-columns">
@@ -1013,7 +1013,7 @@
         var Phone = document.querySelector('input[name="Phone"]');
         var CompanyName = document.querySelector('input[name="CompanyName"]');
 
-        var forum_form_nonce = document.querySelector('input[name="forum_form_nonce"]');
+        var forum_form_nonce = document.querySelector('input[name="rsp_nonce"]');
 
 
         var terms = document.querySelector('input[name="terms"]');
