@@ -573,6 +573,8 @@
                     $unique_action = 'my_action_' . wp_generate_uuid4();
                     wp_nonce_field($unique_action, 'rsp_nonce');
                     ?>
+
+                    <input type="hidden" name="unique_action" value="<?= $unique_action ?>" />
                     <!-- <?php wp_nonce_field('submit_forum_form_action', 'forum_form_nonce'); ?> -->
                     <div class="two-columns">
                         <div class="input-wrapper">
@@ -1014,7 +1016,7 @@
         var CompanyName = document.querySelector('input[name="CompanyName"]');
 
         var forum_form_nonce = document.querySelector('input[name="rsp_nonce"]');
-
+        var unique_action = document.querySelector('input[name="unique_action"]');
 
         var terms = document.querySelector('input[name="terms"]');
         //var recaptchaResponse = grecaptcha.getResponse();
@@ -1124,6 +1126,7 @@
                 .then((token) => {
                     const data = new FormData();
                     data.append('forum_form_nonce', forum_form_nonce.value);
+                    data.append('unique_action', unique_action.value);
                     data.append('FirstName', FirstName.value);
                     data.append('LastName', LastName.value);
                     data.append('Email', Email.value);
