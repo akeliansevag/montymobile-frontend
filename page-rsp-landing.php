@@ -569,7 +569,11 @@
 
             <div class="sign-up-form">
                 <form id="signUpForm" action="" method="post">
-                    <?php wp_nonce_field('submit_forum_form_action', 'forum_form_nonce'); ?>
+                    <?php
+                    $unique_action = 'my_action_' . wp_generate_uuid4();
+                    wp_nonce_field($unique_action, 'my_nonce');
+                    ?>
+                    <!-- <?php wp_nonce_field('submit_forum_form_action', 'forum_form_nonce'); ?> -->
                     <div class="two-columns">
                         <div class="input-wrapper">
                             <label for="FirstName">First Name</label>
