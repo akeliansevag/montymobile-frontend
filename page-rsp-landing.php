@@ -1134,7 +1134,6 @@
                     data.append('Phone', Phone.value);
                     data.append('CompanyName', CompanyName.value);
                     data.append('recaptcha_token', token);
-
                     fetch(RSP_FORWARD_URL, {
                             method: 'POST',
                             body: data
