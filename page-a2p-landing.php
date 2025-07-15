@@ -55,7 +55,7 @@
         border-radius: 70px;
         padding: 50px;
         width: 90%;
-        height: 90%;
+        /* height: 90%; */
         position: relative;
         z-index: 2;
     }
@@ -407,7 +407,7 @@
     @media only screen and (max-width:1399px) {
         .sign-up-content {
             width: 92%;
-            height: 92%;
+            /* height: 92%; */
         }
 
         .sign-up-content p {
@@ -433,7 +433,7 @@
 
         .sign-up-content {
             width: 100%;
-            height: 100%;
+            /* height: 100%; */
         }
 
         .sign-up-popup .sign-up-popup-content {
@@ -583,16 +583,20 @@
 
             <div class="sign-up-form">
                 <form id="signUpForm" action="" method="post">
-                    <?php wp_nonce_field('submit_forum_form_action', 'forum_form_nonce'); ?>
+                    <?php
+                    $unique_action = 'my_action_' . wp_generate_uuid4();
+                    wp_nonce_field($unique_action, 'a2p_nonce');
+                    ?>
+                    <input type="hidden" name="unique_action" value="<?= $unique_action ?>" />
                     <div class="two-columns">
                         <div class="input-wrapper">
                             <label for="CompanyName">Company Name</label>
-                            <input type="text" name="CompanyName" placeholder="Company Name" />
+                            <input maxlength="40" type="text" name="CompanyName" placeholder="Company Name" />
                             <div class="error" id="CompanyNameError"></div>
                         </div>
                         <div class="input-wrapper">
                             <label for="FullName">Full Name</label>
-                            <input type="text" name="FullName" placeholder="Full Name" />
+                            <input maxlength="40" type="text" name="FullName" placeholder="Full Name" />
                             <div class="error" id="FullNameError"></div>
                         </div>
 
@@ -604,12 +608,12 @@
 
                         <div class="input-wrapper">
                             <label for="Email">Email</label>
-                            <input type="text" name="Email" placeholder="Email" />
+                            <input maxlength="40" type="text" name="Email" placeholder="Email" />
                             <div class="error" id="EmailError"></div>
                         </div>
                         <div class="input-wrapper">
                             <label for="Phone">Business Phone</label>
-                            <input type="text" name="Phone" placeholder="Business Phone" />
+                            <input maxlength="40" type="text" name="Phone" placeholder="Business Phone" />
                             <div class="error" id="PhoneError"></div>
                         </div>
                     </div>
@@ -1143,7 +1147,8 @@
         var Phone = document.querySelector('input[name="Phone"]');
         var CompanyName = document.querySelector('input[name="CompanyName"]');
 
-        var forum_form_nonce = document.querySelector('input[name="forum_form_nonce"]');
+        var forum_form_nonce = document.querySelector('input[name="a2p_nonce"]');
+        var unique_action = document.querySelector('input[name="unique_action"]');
 
 
         var terms = document.querySelector('input[name="terms"]');
@@ -1265,6 +1270,7 @@
                 .then((token) => {
                     const data = new FormData();
                     data.append('forum_form_nonce', forum_form_nonce.value);
+                    data.append('unique_action', unique_action.value);
                     data.append('CompanyName', CompanyName.value);
                     data.append('FullName', FullName.value);
                     data.append('Email', Email.value);
