@@ -1848,6 +1848,10 @@ ul.join-us-items li::before {
   font-weight: bold;
 }
 
+.single-post .post-content h2 {
+  color: #000000;
+}
+
 .post-categories {
   list-style-type: none;
   padding: 0;
