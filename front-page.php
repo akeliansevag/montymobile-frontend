@@ -35,6 +35,27 @@ $astroImage = get_field("floating_astronaut_image", 7);
             </a>
 
         </div> -->
+        <div class="h-slider-item slide-1">
+            <a href="<?= get_permalink(get_page_by_path('mwc-2025')) ?>" target="_blank">
+                <div class="h-slider-background">
+                    <img src="<?= get_template_directory_uri() ?>/assets/img/esim-hub-banner.webp" alt="Monty eSIM Hub">
+                </div>
+                <div class="position-relative z-1 mt-4 py-4 h-100">
+                    <div class="container h-100">
+                        <div class="row h-100">
+                            <div class="col-lg-12">
+                                <h1 class="display-5 fw-semi-bold text-white mb-4">Introducing <br /> Monty eSIM Hub</h1>
+                                <a href="https://hub.montymobile.com/" class="mm-button" target="_blank">Learn More <svg style="margin-top:-2px;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                                    </svg></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+        </div>
         <?php if ($slider) : ?>
             <?php foreach ($slider as $key => $slide) : ?>
                 <div class="h-slider-item slide-<?= $key ?>">
