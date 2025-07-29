@@ -1226,6 +1226,9 @@
         } else if (hasSpaces(Phone.value)) {
             showError(Phone, PhoneError, 'Ensure there are no spaces at the beginning or end.');
             isValid = false;
+        } else if (!/^\+?\d{5,15}$/.test(Phone.value)) {
+            showError(Phone, PhoneError, 'Enter a valid phone number.');
+            isValid = false;
         } else {
             clearError(Phone, PhoneError);
         }
