@@ -529,7 +529,7 @@
         <img class="mm-emblem" src="<?= get_template_directory_uri() ?>/assets/img/monty-emblem.webp" alt="Monty Mobile Emblem">
         <div class="sign-up-content">
             <img class="mm-logo" src="<?= get_template_directory_uri() ?>/assets/img/monty-mobile-logo.webp" alt="Monty Mobile Logo">
-            <p class="medium-title">
+            <p class="medium-title mt-3">
                 <strong>Deliver messages that matter, exactly when they matter.</strong>
             </p>
             <p>
