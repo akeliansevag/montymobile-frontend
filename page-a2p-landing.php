@@ -65,7 +65,7 @@
     }
 
     .sign-up-content p {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .sign-up-content ul {
@@ -80,6 +80,16 @@
         gap: 15px;
         align-items: center;
         text-transform: uppercase;
+    }
+
+    .sign-up-content h4 {
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .sign-up-content ul li span span {
+        text-transform: none;
+        font-size: 18px;
     }
 
     .sign-up-two {
@@ -111,6 +121,11 @@
         margin-bottom: 30px;
     }
 
+    .sign-up-form-container h1 {
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+
     .sign-up-form input[type="text"],
     .sign-up-form input[type="email"],
     .sign-up-form input[type="submit"] {
@@ -124,7 +139,7 @@
 
     .sign-up-form .input-wrapper {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .sign-up-form .input-wrapper.checkbox-wrapper {
@@ -368,6 +383,11 @@
         background-size: 25px;
     }
 
+    .input-wrapper label {
+        font-size: 16px;
+        font-weight: bold;
+    }
+
     select {
         color: gray;
         /* Default color for placeholder text */
@@ -404,6 +424,10 @@
         font-size: 13px;
     }
 
+    .medium-title {
+        font-size: 24px !important;
+    }
+
     @media only screen and (max-width:1399px) {
         .sign-up-content {
             width: 92%;
@@ -411,7 +435,7 @@
         }
 
         .sign-up-content p {
-            font-size: 17px;
+            font-size: 18px;
         }
 
         .sign-up-content ul li {
@@ -439,6 +463,10 @@
         .sign-up-popup .sign-up-popup-content {
             width: 70%;
         }
+
+        .sign-up-form-container h1 {
+            font-size: 32px;
+        }
     }
 
     @media only screen and (max-width:768px) {
@@ -462,7 +490,7 @@
         }
 
         .sign-up-content p {
-            font-size: 22px;
+            font-size: 18px;
         }
 
         .sign-up-popup .sign-up-popup-content {
@@ -500,7 +528,7 @@
         <img class="mm-emblem" src="<?= get_template_directory_uri() ?>/assets/img/monty-emblem.webp" alt="Monty Mobile Emblem">
         <div class="sign-up-content">
             <img class="mm-logo" src="<?= get_template_directory_uri() ?>/assets/img/monty-mobile-logo.webp" alt="Monty Mobile Logo">
-            <p>
+            <p class="medium-title">
                 Deliver messages that matter, exactly when they matter.
             </p>
             <p>
@@ -577,8 +605,8 @@
     <div class="sign-up-two">
         <img class="logo-pattern" src="<?= get_template_directory_uri() ?>/assets/img/logo-pattern.webp" alt="logo Pattern">
         <div class="sign-up-form-container">
-            <h1><strong>Powering Global Connections <br />
-                    with Reliable A2P Messaging</strong>
+            <h1>Powering Global Connections <br />
+                with Reliable A2P Messaging
             </h1>
 
             <div class="sign-up-form">
