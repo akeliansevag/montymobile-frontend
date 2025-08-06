@@ -1179,6 +1179,7 @@
         const generalRegex = /^[A-Za-z0-9\s\-']+$/; // For other fields (letters, numbers, space, hyphen, apostrophe)
         const phoneRegex = /^\+?\d{5,15}$/; // Phone number rule
         const emailAliasRegex = /^[^@]+(\+[^@]+)@[^@]+$/; // Email alias + check
+        const companyNameRegex = /^[A-Za-z0-9\- ]+$/;
 
         function hasSpaces(str) {
             return str.trim() !== str;
@@ -1205,8 +1206,8 @@
         } else if (hasSpaces(CompanyName.value)) {
             showError(CompanyName, CompanyNameError, 'Ensure there are no spaces at the beginning or end.');
             isValid = false;
-        } else if (!nameRegex.test(CompanyName.value)) {
-            showError(CompanyName, CompanyNameError, 'Only alphabetic characters and spaces are allowed. No numbers or symbols.');
+        } else if (!companyNameRegex.test(CompanyName.value)) {
+            showError(CompanyName, CompanyNameError, 'Only letters, numbers, spaces, and dashes are allowed.');
             isValid = false;
         } else {
             clearError(CompanyName, CompanyNameError);
