@@ -1166,14 +1166,32 @@
         var isValid = true;
 
 
+        const nameRegex = /^[A-Za-z\s]+$/; // Only letters and spaces allowed
+
         if (!FullName.value) {
             showError(FullName, FullNameError, 'Full Name is required.');
             isValid = false;
         } else if (hasSpaces(FullName.value)) {
             showError(FullName, FullNameError, 'Ensure there are no spaces at the beginning or end.');
             isValid = false;
+        } else if (!nameRegex.test(FullName.value)) {
+            showError(FullName, FullNameError, 'Only alphabetic characters and spaces are allowed.');
+            isValid = false;
         } else {
             clearError(FullName, FullNameError);
+        }
+
+        if (!CompanyName.value) {
+            showError(CompanyName, CompanyNameError, 'Company Name is required.');
+            isValid = false;
+        } else if (hasSpaces(CompanyName.value)) {
+            showError(CompanyName, CompanyNameError, 'Ensure there are no spaces at the beginning or end.');
+            isValid = false;
+        } else if (!nameRegex.test(CompanyName.value)) {
+            showError(CompanyName, CompanyNameError, 'Only alphabetic characters and spaces are allowed.');
+            isValid = false;
+        } else {
+            clearError(CompanyName, CompanyNameError);
         }
 
 
@@ -1233,15 +1251,6 @@
             clearError(Phone, PhoneError);
         }
 
-        if (!CompanyName.value) {
-            showError(CompanyName, CompanyNameError, 'Company Name is required.');
-            isValid = false;
-        } else if (hasSpaces(CompanyName.value)) {
-            showError(CompanyName, CompanyNameError, 'Ensure there are no spaces at the beginning or end.');
-            isValid = false;
-        } else {
-            clearError(CompanyName, CompanyNameError);
-        }
 
 
         if (!terms.checked) {
