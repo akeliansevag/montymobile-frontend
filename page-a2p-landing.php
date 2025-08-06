@@ -122,8 +122,9 @@
     }
 
     .sign-up-form-container h1 {
-        font-size: 48px;
+        font-size: 40px;
         margin-bottom: 20px;
+        font-weight: bold;
     }
 
     .sign-up-form input[type="text"],
@@ -529,7 +530,7 @@
         <div class="sign-up-content">
             <img class="mm-logo" src="<?= get_template_directory_uri() ?>/assets/img/monty-mobile-logo.webp" alt="Monty Mobile Logo">
             <p class="medium-title">
-                Deliver messages that matter, exactly when they matter.
+                <strong>Deliver messages that matter, exactly when they matter.</strong>
             </p>
             <p>
                 Monty Mobile’s A2P Messaging solution enables enterprises, platforms, and operators to send time-sensitive, secure, and personalized messages to users across the globe. Whether it’s OTPs, alerts, or promotional campaigns, our robust platform ensures your messages are delivered with speed, precision, and guaranteed uptime.
