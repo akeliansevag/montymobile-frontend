@@ -196,6 +196,7 @@
     .grey-text {
         color: #9b9b9b;
         font-size: 14px;
+        font-weight: normal;
     }
 
     .input-wrapper .grey-text {
