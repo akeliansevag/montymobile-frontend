@@ -1166,8 +1166,25 @@
         var isValid = true;
 
 
-        const nameRegex = /^[A-Za-z\s]+$/; // Only letters and spaces allowed
+        FullName.value = FullName.value.trim();
+        CompanyName.value = CompanyName.value.trim();
+        Email.value = Email.value.trim();
+        Country.value = Country.value.trim();
+        Industry.value = Industry.value.trim();
+        Product.value = Product.value.trim();
+        Phone.value = Phone.value.trim();
 
+        // Regex Rules
+        const nameRegex = /^[A-Za-z\s]+$/; // For Full Name & Company Name (only letters & spaces)
+        const generalRegex = /^[A-Za-z0-9\s\-']+$/; // For other fields (letters, numbers, space, hyphen, apostrophe)
+        const phoneRegex = /^\+?\d{5,15}$/; // Phone number rule
+        const emailAliasRegex = /^[^@]+(\+[^@]+)@[^@]+$/; // Email alias + check
+
+        function hasSpaces(str) {
+            return str.trim() !== str;
+        }
+
+        // Full Name
         if (!FullName.value) {
             showError(FullName, FullNameError, 'Full Name is required.');
             isValid = false;
@@ -1175,12 +1192,13 @@
             showError(FullName, FullNameError, 'Ensure there are no spaces at the beginning or end.');
             isValid = false;
         } else if (!nameRegex.test(FullName.value)) {
-            showError(FullName, FullNameError, 'Only alphabetic characters and spaces are allowed.');
+            showError(FullName, FullNameError, 'Only alphabetic characters and spaces are allowed. No numbers or symbols.');
             isValid = false;
         } else {
             clearError(FullName, FullNameError);
         }
 
+        // Company Name
         if (!CompanyName.value) {
             showError(CompanyName, CompanyNameError, 'Company Name is required.');
             isValid = false;
@@ -1188,63 +1206,76 @@
             showError(CompanyName, CompanyNameError, 'Ensure there are no spaces at the beginning or end.');
             isValid = false;
         } else if (!nameRegex.test(CompanyName.value)) {
-            showError(CompanyName, CompanyNameError, 'Only alphabetic characters and spaces are allowed.');
+            showError(CompanyName, CompanyNameError, 'Only alphabetic characters and spaces are allowed. No numbers or symbols.');
             isValid = false;
         } else {
             clearError(CompanyName, CompanyNameError);
         }
 
-
+        // Email
         if (!Email.value) {
             showError(Email, EmailError, 'Email is required.');
             isValid = false;
         } else if (!isValidEmail(Email.value)) {
             showError(Email, EmailError, 'Please enter a valid email address.');
             isValid = false;
-        } else if (/^[^@]+(\+[^@]+)@[^@]+$/.test(Email.value)) {
+        } else if (emailAliasRegex.test(Email.value)) {
             showError(Email, EmailError, 'Please use your primary email address without "+" aliases.');
             isValid = false;
         } else {
             clearError(Email, EmailError);
         }
 
+        // Country
         if (!Country.value) {
             showError(Country, CountryError, 'Country is required.');
             isValid = false;
         } else if (hasSpaces(Country.value)) {
             showError(Country, CountryError, 'Ensure there are no spaces at the beginning or end.');
             isValid = false;
+        } else if (!generalRegex.test(Country.value)) {
+            showError(Country, CountryError, 'Special characters are not allowed.');
+            isValid = false;
         } else {
             clearError(Country, CountryError);
         }
 
+        // Industry
         if (!Industry.value) {
             showError(Industry, IndustryError, 'Industry is required.');
             isValid = false;
         } else if (hasSpaces(Industry.value)) {
             showError(Industry, IndustryError, 'Ensure there are no spaces at the beginning or end.');
             isValid = false;
+        } else if (!generalRegex.test(Industry.value)) {
+            showError(Industry, IndustryError, 'Special characters are not allowed.');
+            isValid = false;
         } else {
             clearError(Industry, IndustryError);
         }
 
+        // Product
         if (!Product.value) {
             showError(Product, ProductError, 'Product is required.');
             isValid = false;
         } else if (hasSpaces(Product.value)) {
             showError(Product, ProductError, 'Ensure there are no spaces at the beginning or end.');
             isValid = false;
+        } else if (!generalRegex.test(Product.value)) {
+            showError(Product, ProductError, 'Special characters are not allowed.');
+            isValid = false;
         } else {
             clearError(Product, ProductError);
         }
 
+        // Phone
         if (!Phone.value) {
             showError(Phone, PhoneError, 'Phone Number is required.');
             isValid = false;
         } else if (hasSpaces(Phone.value)) {
             showError(Phone, PhoneError, 'Ensure there are no spaces at the beginning or end.');
             isValid = false;
-        } else if (!/^\+?\d{5,15}$/.test(Phone.value)) {
+        } else if (!phoneRegex.test(Phone.value)) {
             showError(Phone, PhoneError, 'Enter a valid phone number.');
             isValid = false;
         } else {
