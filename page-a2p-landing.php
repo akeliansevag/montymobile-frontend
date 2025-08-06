@@ -78,7 +78,6 @@
         margin-bottom: 20px;
         display: flex;
         gap: 15px;
-        align-items: center;
         text-transform: uppercase;
     }
 
