@@ -9,7 +9,7 @@ if (get_field("dark_theme")) {
 
 <head>
 	<!-- Google Tag Manager -->
-	<!-- <script>
+	<script>
 		(function(w, d, s, l, i) {
 			w[l] = w[l] || [];
 			w[l].push({
@@ -24,7 +24,7 @@ if (get_field("dark_theme")) {
 				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
 			f.parentNode.insertBefore(j, f);
 		})(window, document, 'script', 'dataLayer', 'GTM-MML9G7B');
-	</script> -->
+	</script>
 	<!-- End Google Tag Manager -->
 
 
@@ -33,10 +33,10 @@ if (get_field("dark_theme")) {
 	<link href="<?= get_template_directory_uri() . '/assets/img/faviconmonty.webp' ?>" rel="shortcut icon">
 	<link href="<?= get_template_directory_uri() . '/assets/img/faviconmonty.webp' ?>" rel="apple-touch-icon-precomposed">
 
-	<!-- <meta name="facebook-domain-verification" content="ed9xv4360f49lzzzg7bt1ehtsahj9k" /> -->
-	<!-- <link href="//www.google-analytics.com" rel="dns-prefetch"> -->
+	<meta name="facebook-domain-verification" content="ed9xv4360f49lzzzg7bt1ehtsahj9k" />
+	<link href="//www.google-analytics.com" rel="dns-prefetch">
 	<!-- Google tag (gtag.js) -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-FCLLMVSZJ1"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-FCLLMVSZJ1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -46,9 +46,9 @@ if (get_field("dark_theme")) {
 		gtag('js', new Date());
 
 		gtag('config', 'G-FCLLMVSZJ1');
-	</script> -->
+	</script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199567258-1"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-199567258-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -63,8 +63,8 @@ if (get_field("dark_theme")) {
 		_linkedin_partner_id = "609028";
 		window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
 		window._linkedin_data_partner_ids.push(_linkedin_partner_id);
-	</script> -->
-	<!-- <script type="text/javascript">
+	</script>
+	<script type="text/javascript">
 		(function(l) {
 			if (!l) {
 				window.lintrk = function(a, b) {
@@ -79,12 +79,12 @@ if (get_field("dark_theme")) {
 			b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
 			s.parentNode.insertBefore(b, s);
 		})(window.lintrk);
-	</script> -->
-	<!-- <noscript>
+	</script>
+	<noscript>
 		<img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=609028&fmt=gif" />
-	</noscript> -->
+	</noscript>
 	<!-- Google tag (gtag.js) -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-979460023"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-979460023"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 
@@ -93,9 +93,9 @@ if (get_field("dark_theme")) {
 		}
 		gtag('js', new Date());
 		gtag('config', 'AW-979460023');
-	</script> -->
+	</script>
 	<!-- Google tag (gtag.js) -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16690522364">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16690522364">
 	</script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -106,10 +106,10 @@ if (get_field("dark_theme")) {
 		gtag('js', new Date());
 
 		gtag('config', 'AW-16690522364');
-	</script> -->
+	</script>
 	<!-- Event snippet for Sign-Up conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-	<!-- <script>
+	<script>
 		function gtag_report_conversion(url) {
 			var callback = function() {
 				if (typeof(url) != 'undefined') {
@@ -122,7 +122,7 @@ In your html page, add the snippet and call gtag_report_conversion when someone 
 			});
 			return false;
 		}
-	</script> -->
+	</script>
 
 	<?php wp_head(); ?>
 </head>
