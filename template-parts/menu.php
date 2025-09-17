@@ -12,7 +12,7 @@ $third_level_items = [];
         <?php foreach ($menu as $key => $item) : ?>
             <li>
                 <?php if ($item['url'] != "#") : ?>
-                    <a href="<?= $item['url']; ?>" target="<?= $item['target'] ?>"><span class="dotted-design"><?= $item['title'] ?></span></a>
+                    <a rel="<?= $item['xfn'] ?>" href="<?= $item['url']; ?>" target="<?= $item['target'] ?>"><span class="dotted-design"><?= $item['title'] ?></span></a>
                 <?php else : ?>
                     <div class="no-link-item"><span class="dotted-design"><?= $item['title'] ?></span></div>
                 <?php endif; ?>
@@ -30,7 +30,7 @@ $third_level_items = [];
                                                 $rightArrow = "<span class='right-arrow'><i class='fa fa-chevron-right'></i></span>";
                                             }
                                             ?>
-                                            <a class="black-hover" data-level="one" data-menu="menu-<?= $first_child['ID'] ?>" href="<?= $first_child['url']; ?>" target="<?= $first_child['target'] ?>">
+                                            <a rel="<?= $first_child['xfn'] ?>" class="black-hover" data-level="one" data-menu="menu-<?= $first_child['ID'] ?>" href="<?= $first_child['url']; ?>" target="<?= $first_child['target'] ?>">
                                                 <?= $first_child['title'] ?>
                                                 <?= $rightArrow; ?>
                                             </a>
@@ -54,7 +54,7 @@ $third_level_items = [];
                                             }
                                             ?>
                                             <li class="mb-2">
-                                                <a class="black-hover" data-level="two" data-menu="menu-<?= $csl['ID'] ?>" href="<?= $csl['url']; ?>" target="<?= $csl['target'] ?>"><?= $csl['title'] ?> <?= $rightArrow; ?></a>
+                                                <a rel="<?= $csl['xfn'] ?>" class="black-hover" data-level="two" data-menu="menu-<?= $csl['ID'] ?>" href="<?= $csl['url']; ?>" target="<?= $csl['target'] ?>"><?= $csl['title'] ?> <?= $rightArrow; ?></a>
                                             </li>
                                             <?php
                                             if ($csl['children']) {
@@ -78,7 +78,7 @@ $third_level_items = [];
                                             }
                                             ?>
                                             <li class="mb-2">
-                                                <a class="black-hover" data-level="three" data-menu="menu-<?= $tl['ID'] ?>" href="<?= $tl['url']; ?>" target="<?= $tl['target'] ?>"><?= $tl['title'] ?> <?= $rightArrow ?></a>
+                                                <a rel="<?= $tl['xfn'] ?>" class="black-hover" data-level="three" data-menu="menu-<?= $tl['ID'] ?>" href="<?= $tl['url']; ?>" target="<?= $tl['target'] ?>"><?= $tl['title'] ?> <?= $rightArrow ?></a>
                                             </li>
                                         <?php endforeach;
                                         $third_level_items = []; ?>
